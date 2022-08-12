@@ -1,0 +1,43 @@
+.dasbordNav {
+    background-color: #144a38;
+    padding: 8px 0;
+}
+
+.userBox {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.userList_sec {
+    padding: 50px 0;
+}
+
+.userList_sec h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.addEmployee_input {
+    outline: none;
+    border: none;
+    width: 370px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #edf5f3;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.employee_modalBox {
+    display: grid !important;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.employee_modalBox .modal-dialog {
+    height: auto;
+    margin: 0;
+    display: inline-block;
+}
