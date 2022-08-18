@@ -68,6 +68,9 @@
 .rs-picker-date .rs-picker-toggle.rs-btn .rs-picker-toggle-caret, .rs-picker-date .rs-picker-toggle.rs-btn .rs-picker-toggle-clean, .rs-picker-daterange .rs-picker-toggle.rs-btn .rs-picker-toggle-caret, .rs-picker-daterange .rs-picker-toggle.rs-btn .rs-picker-toggle-clean{
     top: 15px !important;
 }
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value, .rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+    color: #000000 !important;
+}
 /* .rs-picker-toggle-textbox {
     outline: none;
     border: none;
@@ -88,3 +91,13 @@
     margin: 5px 0;
     font-size: 14px;
 } */
+
+.modal-body input::-webkit-input-placeholder{
+    color: #000000;
+}
+.rs-picker-toggle-caret {
+    color: #000000 !important;
+}
+.rs-picker-toggle .rs-picker-toggle-placeholder {
+    color: #000000 !important;
+}

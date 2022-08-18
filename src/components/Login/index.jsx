@@ -1,8 +1,9 @@
-import './style.css'
-import styles from './style.module.css'
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import config from '../../config'
+import './style.css';
+import styles from './style.module.css';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import config from '../../config';
+
 
 // import api from '../../../api/'
 
@@ -28,7 +29,7 @@ const Login = () => {
         // useEffect( () => {
 
         
-            axios.post(config.baseURL + '/v1/user/login', user)
+            axios.post(config.baseURL + 'v1/user/login', user)
             .then(res => {
                 const response = res.data;
                 const data = response.data
@@ -38,15 +39,19 @@ const Login = () => {
                         localStorage.setItem("token", data.token);
                         localStorage.setItem("role", data.role);
                         localStorage.setItem("usersd", data.userName);
+                        
                         window.location = "/";
                     }else{
                         localStorage.setItem("token", data.token);
                         localStorage.setItem("role", data.role);
                         localStorage.setItem("usersd", data.userName);
+                        
                         window.location = "/";
                     }
+                    
                 } else {
                     setError(response.responseMessage);
+                    
                 }
             }).catch(err => {
                 //console.log(err);
