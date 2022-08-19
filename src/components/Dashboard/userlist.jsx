@@ -1,60 +1,60 @@
 import styles from './style.module.css';
 import './style.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import axios from 'axios'
 import config from '../../config'
 import { useState, useEffect } from 'react';
 // import DatePicker from "react-datepicker";
 // import "react-datepicker/dist/react-datepicker.css";
-import { DatePicker } from "rsuite";
-import "../../../node_modules/rsuite/dist/rsuite.min.css";
+// import { DatePicker } from "rsuite";
+// import "../../../node_modules/rsuite/dist/rsuite.min.css";
 
 const Userlist = () => {
 
     
-    const [firstname, setFirstname] = useState('');
-    const [lastname, setlastname] = useState('');
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [joindate, setJoindate] = useState('');
-    const [email, setEmail] = useState('');
-    const [birthdate, setBirthdate] = useState('');
-    const [designation, setDesignation] = useState('');
-    const [leaves, setLeaves] = useState('');
+    // const [firstname, setFirstname] = useState('');
+    // const [lastname, setlastname] = useState('');
+    // const [username, setUsername] = useState('');
+    // const [password, setPassword] = useState('');
+    // const [joindate, setJoindate] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [birthdate, setBirthdate] = useState('');
+    // const [designation, setDesignation] = useState('');
+    // const [leaves, setLeaves] = useState('');
 
 
-    function addEmployee(event) {
-        event.preventDefault()
+    // function addEmployee(event) {
+    //     event.preventDefault()
 
-        const user = {
-            firstName: firstname,
-            lastName: lastname,
-            userName: username,
-            email: email,
-            password: password,
-            joinDate: joindate,
-            birthDate: birthdate,
-            designation: designation,
-            leaves: leaves
-        }
+    //     const user = {
+    //         firstName: firstname,
+    //         lastName: lastname,
+    //         userName: username,
+    //         email: email,
+    //         password: password,
+    //         joinDate: joindate,
+    //         birthDate: birthdate,
+    //         designation: designation,
+    //         leaves: leaves
+    //     }
 
-        axios.post(config.baseURL + 'v1/user/addemployee', user)
-            .then(res => {
-                const response = res;
-                console.log(response);
-                if (response.responseCode === 200) {
-                    window.location.reload();
-                }else{
-                    window.location = "/";
-                }
+    //     axios.post(config.baseURL + 'v1/user/addemployee', user)
+    //         .then(res => {
+    //             const response = res;
+    //             console.log(response);
+    //             if (response.responseCode === 200) {
+    //                 window.location.reload();
+    //             }else{
+    //                 window.location = "/";
+    //             }
                 
-            }).catch(err => {
-                console.log(err);
-            })
+    //         }).catch(err => {
+    //             console.log(err);
+    //         })
 
-            event.target.reset();
+    //         event.target.reset();
 
-    }
+    // }
 
     // const [startDate, setStartDate] = useState(new Date());
 
@@ -103,7 +103,7 @@ const Userlist = () => {
                         <table className="table table-success table-striped">
                             <thead>
                                 <tr>
-                                    <th scope="col">No.</th>
+                                    <th scope="col">#</th>
                                     <th scope="col">Name</th>
 
                                 </tr>
@@ -122,12 +122,12 @@ const Userlist = () => {
 
         <section className={styles.modalSec}>
             {/* <!-- Button trigger modal --> */}
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Add Employee
-            </button>
+            </button> */}
 
             {/* <!-- Modal --> */}
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="false" aria-hidden="true">
+            {/* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="false" aria-hidden="true">
                 <div className={styles.employee_modalBox}>
                     <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
@@ -149,7 +149,7 @@ const Userlist = () => {
                                     required
                                     />
 
-                                    {/* <DatePicker dateFormat="dd/MMM/yyyy" selected={startDate} className={styles.addEmployee_input} placeholderText="Date of joining" onChange={date => setStartDate(date)} /> */}
+                                    
 
                                     <DatePicker id="date_of_join" placeholder="Date of joining" name="joinDate" format="dd MMM yyyy" 
                                     onChange={date => setJoindate(date)}
@@ -199,7 +199,9 @@ const Userlist = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
+
         </section>
     </>
 

@@ -10,7 +10,7 @@
 }
 
 .userList_sec {
-    padding: 50px 0;
+    padding: 5em 0;
 }
 
 .userList_sec h1 {
@@ -21,7 +21,7 @@
 .addEmployee_input {
     outline: none;
     border: none;
-    width: 370px;
+    width: 100%;
     padding: 15px;
     color: #000;
     border-radius: 10px;
@@ -44,12 +44,23 @@
 }
 
 .error_msg {
-	width: 370px;
-	padding: 15px;
-	margin: 5px 0;
-	font-size: 14px;
-	background-color: #f34646;
-	color: white;
-	border-radius: 5px;
-	text-align: center;
+    width: 370px;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.addEmployee_head {
+    font-size: 32px;
+    margin-bottom: 15px;
+    
+}
+
+.holiday_head {
+    font-size: 32px;
+    margin-bottom: 15px;
 }

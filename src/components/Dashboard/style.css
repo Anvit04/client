@@ -57,9 +57,11 @@
 .rs-anim-fade.rs-anim-in {
     z-index: 99999;
 }
-
+.rs-picker-toggle-wrapper {
+    width: 100%;
+}
 .rs-picker-toggle.rs-btn.rs-btn-default {
-    width: 370px;
+    width: 100%;
     background-color: #edf5f3 !important;
     margin: 5px 0;
     border: 0;
@@ -92,7 +94,7 @@
     font-size: 14px;
 } */
 
-.modal-body input::-webkit-input-placeholder{
+.addEmployee input::-webkit-input-placeholder{
     color: #000000;
 }
 .rs-picker-toggle-caret {
@@ -100,4 +102,11 @@
 }
 .rs-picker-toggle .rs-picker-toggle-placeholder {
     color: #000000 !important;
+}
+section.addEmployee, .leaveApply_sec, .holidayCal_sec {
+    padding: 5em 0;
+}
+.cst_subBtn {
+    width: 100%;
+    margin: 10px 0;
 }

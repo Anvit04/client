@@ -1,6 +1,6 @@
 import styles from './style.module.css';
 import './style.css';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import axios from 'axios'
 import config from '../../config'
 import { useState, useEffect } from 'react';
@@ -9,7 +9,7 @@ const Header = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("token");
-        window.location.reload();
+        window.location = ('/');
     }
 
     const role = localStorage.getItem("role");
@@ -38,19 +38,20 @@ const Header = () => {
                                         // Admin
                                         return <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li className="nav-item">
-                                                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" aria-current="page" to="/">Home</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Holiday Calendar</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="holiday">Holiday Calendar</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Policy</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="policy">Policy</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Leaves</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="leaves">Leaves</NavLink>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Add Employee</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="add_employee">Add Employee</NavLink>
+                                                {/* <a className="nav-link " data-bs-toggle="modal" data-bs-target="#exampleModal">Add Employee</a> */}
                                             </li>
                                         </ul>
                                     }
@@ -58,19 +59,24 @@ const Header = () => {
                                         // User
                                         return <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                             <li className="nav-item">
-                                                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" aria-current="page" to="/">Home</NavLink>
                                             </li>
+                                            
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Holiday Calendar</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="holiday">Holiday Calendar</NavLink>
                                             </li>
+
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Policy</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="policy">Policy</NavLink>
                                             </li>
+
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Leaves</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="leaves">Leaves</NavLink>
                                             </li>
+
                                             <li className="nav-item">
-                                                <Link className="nav-link " to="#">Apply</Link>
+                                                <NavLink className="nav-link " exact activeClassName="active" to="leave_apply">Leave Apply</NavLink>
+
                                             </li>
                                         </ul>
                                     }
