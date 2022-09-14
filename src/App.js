@@ -20,23 +20,12 @@ import Leaveapply from './components/Dashboard/NavComponents/Leaveapply';
 function App() {
 
 
-  // axios.get(config.baseURL + '/v1/user/login')
-  //   .then(res =>{
-  //       const response = res.data;
-  //       console.log(response.data)
-  //   }).catch(err =>{
-
-  //   })
+  
 
   const user = localStorage.getItem("token")
   const role = localStorage.getItem("role");
 
-  // console.log(user, "------------")
-  // if(role === 1) {
-  //   user: admin;
-  // }else{
-  //   user: employees;
-  // }
+  
 
 
   return (
@@ -55,7 +44,7 @@ function App() {
             else {
               // Before Login
               return <div>
-
+                <Login />
               </div>
             }
 
@@ -65,11 +54,11 @@ function App() {
 
         <Routes>
 
+          {/* <Route path='/login' exact element={<Login />} />  */}
 
 
+          {user && <Route path="/" exact element={<Dashboard />} />}
 
-          {user && <Route path="/" exact element={<Dashboard />} /> }
-          
           {user && <Route path='/holiday' exact element={<Holiday />} />}
 
           {user && <Route path='/add_employee' exact element={<Addemployee />} />}
@@ -80,38 +69,10 @@ function App() {
 
           {user && <Route path='/leave_apply' exact element={<Leaveapply />} />}
 
-          
-          <Route path='/login' exact element={<Login />} />
+
+          {/* <Route path='/' exact element={<Navigate replace to="/login" />} /> */}
 
 
-
-          <Route path='/' exact element={<Navigate replace to="/login" />} />
-
-          {/* <Route
-            exact
-            path="/"
-            element={user && role === 1 ? <Dashboard /> : <Navigate replace to={"/home"} />}
-          /> */}
-
-          {/* {
-            role === 1 &&
-            (<Route path="/" exact element={<Dashboard />} />)
-
-          }
-
-          {
-            user && 
-            (<Route path='/' exact element={<Home />} />)
-          } */}
-
-
-          {/*           
-          {
-            user && role == 1 ? 
-            (<Route path="/" exact element={<Dashboard />} />)
-            :
-            (<Route path='/' exact element={<Home />} />)
-          } */}
 
 
 
